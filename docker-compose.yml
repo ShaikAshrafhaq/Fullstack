@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sports-league-frontend
+    ports:
+      - "5173:5173"   # Map container's 5173 to host's 5173
+    volumes:
+      - .:/APP        # Live reload: mount project files
+      - /APP/node_modules # Prevent overwriting node_modules
+    restart: unless-stopped
