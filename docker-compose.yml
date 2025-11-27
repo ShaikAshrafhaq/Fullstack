@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: sports-league-frontend
     ports:
-      - "5173:5173"   # Map container's 5173 to host's 5173
+      - "5174:5174"   # Map container's 5173 to host's 5173
     volumes:
       - .:/APP        # Live reload: mount project files
       - /APP/node_modules # Prevent overwriting node_modules
